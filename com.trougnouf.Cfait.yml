@@ -1,7 +1,7 @@
 # NOTE: The 'tag' and 'commit' fields below are automatically updated by scripts/prepare_release.py
 app-id: com.trougnouf.Cfait
 runtime: org.freedesktop.Platform
-runtime-version: "25.08"
+runtime-version: '25.08'
 sdk: org.freedesktop.Sdk
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
@@ -38,10 +38,11 @@ modules:
       # Application source
       - type: git
         url: https://codeberg.org/trougnouf/cfait
-        commit: 01bd097043716548da9071e38794036bb8860b88
+        commit: bd7f53399468bfbf16280f08c9bd02da286b26e2
         x-checker-data:
           type: git
           url: https://codeberg.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
+        tag: v0.4.2
       - cargo-sources.yml
