@@ -20,7 +20,7 @@ modules:
       append-path: /usr/lib/sdk/rust-stable/bin
       env:
         CARGO_HOME: /run/build/cfait/cargo
-        AWS_LC_SYS_NO_JITTER_ENTROPY: "1"
+        AWS_LC_SYS_NO_JITTER_ENTROPY: '1'
     build-commands:
       # Build the TUI binary
       - cargo --offline build --release --verbose --features tui
@@ -39,11 +39,11 @@ modules:
       # Application source
       - type: git
         url: https://codeberg.org/trougnouf/cfait
-        commit: 164452f77aaac26774c1efc756df1a58fb980561
+        commit: 7b43e3842a0ad51898d0c0d1c7ebc06b29f82a6f
         x-checker-data:
           type: git
           url: https://codeberg.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
-        tag: v0.5.5
+        tag: v0.5.6
       - cargo-sources.yml
