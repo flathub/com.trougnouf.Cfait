@@ -25,10 +25,10 @@ modules:
       # Build the TUI binary
       - cargo --offline build --release --verbose --features tui
       # Build the GUI binary
-      - cargo --offline build --release --verbose --features gui --bin gui
+      - cargo --offline build --release --verbose --features gui --bin cfait-gui
       # Install binaries to /app/bin
       - install -Dm755 target/release/cfait -t /app/bin/
-      - install -Dm755 target/release/gui /app/bin/cfait-gui
+      - install -Dm755 target/release/cfait-gui /app/bin/cfait-gui
       # Install desktop file and icons (fix Icon name to match app-id)
       - desktop-file-edit --set-icon=com.trougnouf.Cfait assets/cfait.desktop
       - install -Dm644 assets/cfait.desktop /app/share/applications/com.trougnouf.Cfait.desktop
@@ -39,11 +39,11 @@ modules:
       # Application source
       - type: git
         url: https://codeberg.org/trougnouf/cfait
-        commit: af210e170c137b1ce65e4d77a146cbbbc63ed12b
+        commit: fdb6cef12b751d4876d9d500c5a373a060e41489
         x-checker-data:
           type: git
           url: https://codeberg.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
-        tag: v0.5.8
+        tag: v0.5.9
       - cargo-sources.yml
