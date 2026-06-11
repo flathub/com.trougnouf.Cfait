@@ -39,11 +39,11 @@ modules:
       # Application source
       - type: git
         url: https://codeberg.org/trougnouf/cfait
-        commit: 4281f7a3be29b6a31a3d64b05a216afea94fc722
+        commit: fd4f208858a801576084e894b1144db5164f4543
         x-checker-data:
           type: git
           url: https://codeberg.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
-        tag: v1.0.6
+        tag: v1.0.7
       - cargo-sources.yml
