@@ -38,11 +38,11 @@ modules:
     sources:
       # Application source
       - type: git
-        url: https://codeberg.org/trougnouf/cfait
+        url: https://git.disroot.org/trougnouf/cfait
         commit: 01d24a4861ab09dd6e49c4b2e7347ed51595cd4b
         x-checker-data:
           type: git
-          url: https://codeberg.org/trougnouf/cfait
+          url: https://git.disroot.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
         tag: v1.1.0
