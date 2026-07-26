@@ -12,6 +12,7 @@ finish-args:
   - --socket=wayland
   - --share=network
   - --device=dri
+  - --talk-name=org.freedesktop.Notifications
 
 modules:
   - name: cfait
@@ -38,12 +39,12 @@ modules:
     sources:
       # Application source
       - type: git
-        url: https://codeberg.org/trougnouf/cfait
-        commit: 72d58ce3d7621b298ad08792c93ecd9cbc4194c1
+        url: https://git.disroot.org/trougnouf/cfait
+        commit: 01d24a4861ab09dd6e49c4b2e7347ed51595cd4b
         x-checker-data:
           type: git
-          url: https://codeberg.org/trougnouf/cfait
+          url: https://git.disroot.org/trougnouf/cfait
           tag-pattern: ^v([\d.]+)$
       # Cargo dependencies
-        tag: v1.0.9
+        tag: v1.1.0
       - cargo-sources.yml
